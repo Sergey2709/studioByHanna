@@ -86,6 +86,8 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "~/assets/scss/styles.scss";
+
 .reviews {
   width: 100vw;
   overflow: hidden;
@@ -95,7 +97,7 @@ export default {
   align-items: center;
   justify-content: start;
   padding: 70px 30px 30px 30px;
-  color: #fff8dc;
+  color: $color_of_text_on_dark;
 
   &-title__wrapper {
     display: flex;
@@ -138,7 +140,7 @@ export default {
     display: flex;
 
     .arrow {
-      color: #337ab7;
+      color: $color_of_arrows;
       cursor: pointer;
       text-decoration: none;
       background: transparent;

@@ -110,20 +110,22 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~/assets/scss/styles.scss";
+
 .wrapOfMenu {
   position: relative;
   left: 0px;
   right: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(20, 31, 29, 0.6);
+  background-color: $bg_wrapper_of_menu;
 
   .menu {
     width: 300px;
     height: 100vh;
     position: absolute;
     right: 0;
-    background-color: rgba(35, 35, 31, 0.8);
+    background-color: $bg_of_menu;
     padding-left: 25px;
 
     &-close {
@@ -162,13 +164,13 @@ export default {
       padding-left: 0;
 
       &__item {
-        color: rgba(255, 255, 255, 1);
+        color: $color_text_of_menu;
         font-size: 32px;
         line-height: 34px;
         margin-bottom: 16px;
 
         &:hover {
-          color: rgb(64, 81, 79);
+          color: $color_text_of_menu_hover;
           font-size: 34px;
         }
       }
@@ -177,7 +179,7 @@ export default {
         text-decoration: none;
 
         &:hover {
-          color: rgb(64, 81, 79);
+          color: $color_text_of_menu_hover;
         }
       }
     }
@@ -194,12 +196,12 @@ export default {
 
         &__link {
           text-decoration: none;
-          color: rgba(255, 255, 255, 1);
+          color: $color_text_of_menu;
           line-height: auto;
           margin-left: 8px;
 
           &:hover {
-            color: rgb(64, 81, 79);
+            color: $color_text_of_menu_hover;
           }
         }
       }

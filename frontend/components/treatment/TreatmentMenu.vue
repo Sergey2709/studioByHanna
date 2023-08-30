@@ -55,11 +55,14 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "~/assets/scss/styles.scss";
+
 .treatment {
   display: flex;
   justify-content: space-around;
   width: 100vw;
   padding: 50px;
+  color: $color_of_text;
 
   &__title {
     margin-bottom: 50px;
@@ -91,7 +94,6 @@ export default {
     align-items: center;
     font-size: 40px;
     height: 20%;
-    color: rgb(70, 74, 63);
   }
 
   &__menu {
@@ -106,15 +108,16 @@ export default {
         display: flex;
         justify-content: space-between;
         text-decoration: none;
-        color: #464a3f;
         font-size: 22px;
+        color: $color_of_text;
 
         @media (max-width: 670px) {
           font-size: 18px;
         }
 
         &:hover {
-          color: #adb79d;
+          color: $color_of_text_hover;
+          transform: translateY(-2px);
         }
       }
 

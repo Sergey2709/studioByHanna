@@ -83,7 +83,10 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
+@import "~/assets/scss/styles.scss";
+
 .treatment-page {
   font-family: system-ui;
   width: 100vw;
@@ -92,6 +95,7 @@ export default {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  color: $color_of_text;
 
   &__title {
     display: flex;
@@ -126,7 +130,6 @@ export default {
     &__description {
       margin-top: 40px;
       margin-bottom: 40px;
-      color: teal;
 
       blockquote ul {
         margin-left: 16px !important;

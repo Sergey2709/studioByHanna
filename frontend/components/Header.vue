@@ -45,7 +45,6 @@ export default {
   height: 100px;
   width: 100vw;
   max-width: 1600px;
-  padding-right: 20px;
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
@@ -55,9 +54,7 @@ export default {
 
 .header__burger {
   height: 50%;
-  margin-top: auto;
-  margin-left: auto;
-  margin-bottom: auto;
+  margin: auto 20px auto auto;
   z-index: 1;
 
   &:hover {

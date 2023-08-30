@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/styles.scss";
 .about-us {
   margin: 0 auto;
   padding: 50px;
@@ -47,7 +48,7 @@ export default {
 
   &__title {
     font-size: 36px;
-    color: rgba(70,74,63,1);
+    color: $color_of_text;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 60px;
@@ -58,7 +59,7 @@ export default {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: rgba(70,74,63,1);
+    color: $color_of_text;
   }
 
   @media (max-width: 770px) {

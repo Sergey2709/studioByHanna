@@ -11,6 +11,8 @@ export default {};
 </script>
 
 <style lang="scss">
+@import "~/assets/scss/styles.scss";
+
 .btn-book {
   display: flex;
   justify-content: center;
@@ -21,8 +23,8 @@ export default {};
   display: flex;
   justify-items: center;
   align-items: center;
-  background: #9cc5c6;
-  color: #fff;
+  background: $bg_of_btn_book;
+  color: $color_of_text_btn;
   text-transform: uppercase;
   width: 150px;
 

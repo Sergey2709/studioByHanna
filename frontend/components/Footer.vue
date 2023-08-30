@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/styles.scss";
 .footer {
   display: flex;
   align-items: center;
@@ -79,7 +80,7 @@ export default {
       font-size: 24px;
 
       a {
-        color: black;
+        color: $color_of_text;
         text-decoration: none;
 
         font-weight: bold;
@@ -90,7 +91,7 @@ export default {
           line-height: 30px !important;
 
           &:hover {
-            color: rgb(64, 81, 79);
+            color: $color_of_text_hover;
             font-size: 26px;
           }
         }
@@ -120,11 +121,11 @@ export default {
       line-height: 20px !important;
 
       a {
-        color: black;
+        color: $color_of_text;
         text-decoration: none;
 
         &:hover {
-          color: rgb(64, 81, 79);
+          color: $color_of_text_hover;
           font-size: 14.5px;
         }
       }

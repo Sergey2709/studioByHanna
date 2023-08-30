@@ -10,6 +10,8 @@
 export default {};
 </script>
 <style lang="scss">
+@import "~/assets/scss/styles.scss";
+
 .values {
   height: 300px;
   width: 100vw;
@@ -17,10 +19,10 @@ export default {};
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #7d9c9c;
+  background: $bg_secondary;
   font-size: 40px;
 
-  color: #fff8dc;
+  color: $color_of_text_on_dark;
   display: flex;
   justify-content: center;
   text-align: center;
