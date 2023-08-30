@@ -96,10 +96,6 @@ export default {
       bottom: -370px;
       left: -1400px;
     }
-
-    @media (max-width: 800px) {
-      bottom: 50px;
-    }
   }
 
   @media (max-width: 800px) {
