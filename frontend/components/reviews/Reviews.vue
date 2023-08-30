@@ -91,7 +91,7 @@ export default {
 .reviews {
   width: 100vw;
   overflow: hidden;
-  background: #7d9c9c;
+  background: $bg_secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
