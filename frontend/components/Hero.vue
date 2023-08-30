@@ -87,14 +87,18 @@ export default {
 
   .book-now {
     position: absolute;
-    bottom: 350px;
-    left: 40px;
+    bottom: 50px;
+    left: 50px;
     box-shadow: -10px 12px 5px #94a19d;
 
     @media (min-width: 1600px) {
       position: relative;
       bottom: -370px;
       left: -1400px;
+    }
+
+    @media (max-width: 800px) {
+      bottom: 50px;
     }
   }
 
