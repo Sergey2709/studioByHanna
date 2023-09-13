@@ -29,6 +29,10 @@
       "relation": "manyToMany",
       "target": "api::treatment.treatment",
       "inversedBy": "categories_of_treatments"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "slug"
     }
   }
 }

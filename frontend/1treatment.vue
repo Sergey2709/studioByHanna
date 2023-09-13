@@ -34,7 +34,7 @@
 </template>
 <script>
 import Header from "../components/Header";
-import Footer from "../components/Footer.vue";
+import Footer from "./components/Footer.vue";
 import BtnBookNow from "~/components/btns/BtnBookNow.vue";
 import API from "~/apies/backend";
 
@@ -44,6 +44,13 @@ export default {
     Footer,
     BtnBookNow,
     API,
+  },
+
+  props: {
+    itemSlug: {
+      type: String,
+      required: true,
+    },
   },
 
   data() {
@@ -69,17 +76,23 @@ export default {
   },
 
   mounted() {
-    const idsArr = this.$route.query.treatmentIds;
-    this.title = this.$route.query.title;
+
+    resp.map((el) => {
+      this.$axios(
+        `GET /api/treatment?filters\[Slug\][$eq]=create-a-slug-system-with-strapi-v4?populate=*`
+      ).then((response) => {
+        this.responseArr.push(response.data.data);
+      });
+    });
 
     idsArr.map((el) => {
       this.$axios(`/api/treatments/${el}?populate=*`).then((response) => {
         this.responseArr.push(response.data.data);
-        console.log(response.data.data);
       });
     });
+    console.log(resp);
 
-    this.api = API;
+    // this.api = API;
   },
 };
 </script>

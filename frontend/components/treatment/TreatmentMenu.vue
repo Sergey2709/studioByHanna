@@ -10,14 +10,16 @@
         >
           <nuxt-link
             :to="{
-              path: '/treatment',
-              query: {
-                title: item.attributes.title,
-                treatmentIds: item.attributes.treatments.data.map(
-                  (el) => el.id
-                ),
-              },
+              // path: `/treatment`,
+              path: `/treatment/${item.attributes.Slug}`,
+              // query: {
+              //   title: item.attributes.title,
+              //   treatmentIds: item.attributes.treatments.data.map(
+              //     (el) => el.id
+              //   ),
+              // },
             }"
+            :slug="item.attributes.Slug"
             >{{ item.attributes.title }}
           </nuxt-link>
         </li>
@@ -41,6 +43,7 @@ export default {
       galleryItems: [],
       treatments: [],
       ids: [],
+      slug: "",
     };
   },
 
@@ -54,6 +57,8 @@ export default {
   },
 };
 </script>
+
+
 <style lang="scss">
 @import "~/assets/scss/styles.scss";
 

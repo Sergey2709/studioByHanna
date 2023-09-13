@@ -1,3 +1,5 @@
+// import BaseSitemap from "./utils/sitemap/sitemapList/index";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -30,6 +32,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -37,6 +41,16 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: process.env.API_URL,
   },
+
+  // sitemap: {
+  //   xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+  //   path: "/sitemap.xml",
+  //   defaults: {
+  //     changefreq: "weekly",
+  //     lastmod: new Date(),
+  //   },
+  //   sitemaps: [...BaseSitemap],
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
