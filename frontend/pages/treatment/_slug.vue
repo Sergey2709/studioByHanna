@@ -78,7 +78,6 @@ export default {
       error({ statusCode: 404, message: "Post not found" });
     }
 
-    console.log(pageData);
     return { pageData };
   },
 

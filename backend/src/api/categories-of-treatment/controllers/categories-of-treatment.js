@@ -22,8 +22,6 @@ module.exports = createCoreController(
         query,
       );
 
-      console.log(post[0]);
-
       return this.transformResponse({
         posts: post[0].treatments,
         title: post[0].title,

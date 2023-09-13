@@ -55,7 +55,6 @@ export default {
     bodyOfSite.style.overflowX = "hidden";
 
     this.$axios(`/api/policies/?populate=*`).then((response) => {
-      console.log(response.data.data[0].attributes);
       this.title = response.data.data[0].attributes.title;
       this.content = response.data.data[0].attributes.content;
       this.pictureUrl =
