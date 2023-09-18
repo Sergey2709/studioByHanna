@@ -2,32 +2,35 @@
   <main>
     <Header />
     <div class="treatment-page">
-      <h1 class="treatment-page__title">{{ pageData.data.data.attributes.title }}</h1>
+      <!-- <p>{{ pageData }}</p> -->
+      <h1 class="treatment-page__title">
+        {{ pageData.data.data.attributes.title }}
+      </h1>
       <article
-        v-for="item in pageData.data.data.attributes.posts"
+        v-for="item in pageData.data.data.attributes.treatments.data"
         :key="item.id"
         class="treatment-page__article"
       >
         <div class="treatment-page__article__column">
           <div class="treatment-page__article__title">
-            <h3>{{ item.title }} &nbsp</h3>
-            <h3>{{ item.price }} &nbsp</h3>
-            <h3 v-if="item.unit">{{ item.unit }}</h3>
+            <h3>{{ item.attributes.title }} &nbsp</h3>
+            <h3>{{ item.attributes.price }} &nbsp</h3>
+            <h3 v-if="item.unit">{{ item.attributes.unit }}</h3>
           </div>
 
           <p
-            v-html="item.description"
+            v-html="item.attributes.description"
             class="treatment-page__article__description"
             style="text-align: left; margin-bottom: 60px"
           ></p>
           <BtnBookNow />
         </div>
-        <!-- <img
+        <img
           class="treatment-page__article__picture"
           :src="api + item.attributes.picture.data[0].attributes.url"
           alt="treatment-pic"
-        /> -->
-      </article> 
+        />
+      </article>
     </div>
     <Footer />
   </main>
@@ -72,12 +75,14 @@ export default {
     let pageData = {};
     try {
       pageData = await $axios(
-        `/api/categories-of-treatments/${route.params.slug}?populate=*`
-      )
+        `/api/categories-of-treatments/${route.params.slug}?populate=treatments.picture
+`
+      );
     } catch (e) {
       error({ statusCode: 404, message: "Post not found" });
     }
 
+    console.log(pageData);
     return { pageData };
   },
 
@@ -228,4 +233,3 @@ export default {
   border-top: 1px solid black;
 }
 </style>
-

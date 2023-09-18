@@ -45,7 +45,6 @@ const myOverideRoutes = [
   {
     method: "GET",
     path: "/categories-of-treatments/:slug",
-    // params: { populate: "*" },
     handler: "api::categories-of-treatment.categories-of-treatment.findOne",
   },
 ];
